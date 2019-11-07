@@ -1,7 +1,7 @@
 package pe.edu.upc.webdevs.service;
 
+import pe.edu.upc.webdevs.model.Person;
 
-
-public class IPersonService {
+public interface IPersonService extends CrudService<Person> {
 
 }

@@ -24,7 +24,7 @@ public class PersonController {
 	public String listarPerson(Model model) {
 		
 		try {
-			model.addAtribute("listPerson",personService.findAll());
+			model.addAttribute("listPerson", personService.findAll());
 		} catch (Exception e) {
 			model.addAttribute("error",e.getMessage());
 		}

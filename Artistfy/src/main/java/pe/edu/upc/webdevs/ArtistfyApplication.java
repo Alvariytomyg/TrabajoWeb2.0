@@ -9,5 +9,8 @@ public class ArtistfyApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ArtistfyApplication.class, args);
 	}
+	
+	
+	
 
 }

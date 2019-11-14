@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body>
+	<header th:replace="layout/layout :: header"></header>
+	<div class="container">
+		<div class="card">
+			<div class="card-header text-white bg-secondary">Lista de Artistas</div>
+			<div class="card-body">
+				
+				<div class="table responsive">
+					<table class="table table-striped">
+						<thead class="thead-dark">
+							<tr>
+								<th>Id</th>
+								<th>Nombre</th>
+								<th>Apellido</th>
+								<th>Dni</th>
+								<th>Correo</th>
+								<th>Celular</th>								
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="person:${listPerson}">
+								<td th:text="${person.id}"></td>
+								<td th:text="${person.firstName}"></td>
+								<td th:text="${person.lastName}"></td>
+								<td th:text="${person.dni}"></td>
+								<td th:text="${person.email}"></td>
+								<td th:text="${person.phone}"></td>
+								<td><a th:href="@{'/persons/detail/' + ${person.id}}"
+									   class="btn btn-success">Detalle</a>
+								</td>									
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>

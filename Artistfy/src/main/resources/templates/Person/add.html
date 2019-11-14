@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<style>
+#formulario {
+	position: relative !important;
+	left: 70% !important;
+}
+#label{
+	position: relative !important;
+	left: 17% !important;
+}
+</style>
+<body>
+<header th:replace="layout/layout :: header"></header>
+<h2 id="label">Registrar Artista</h2>
+<br/>
+<div class="row">
+        <div class="col-md-3 form-horizontal">
+             <form  id="formulario" th:action="@{/persons/add}" method="post">
+                
+                 <input type="text" class="form-control" name="firstName" placeholder="Ingrese el nombre" minlength="5" maxlength="20" required pattern="[A-Za-z]+" title="letras tama&ntilde;o m&iacute;nimo:5 m&aacute;ximo:20 ">
+                 <br/>
+                 <input type="text" class="form-control" name="lastName" placeholder="Ingrese su apellido" minlength="5" maxlength="40" required pattern="[A-Za-z]+" title="letras tama&ntilde;o m&iacute;nimo:5 m&aacute;ximo:40 ">
+                 <br/>
+                 <input type="text" class="form-control" name="dni" placeholder="Ingrese su dni" maxlength="8" required pattern="[0-9]+" >
+                 <br/>
+                 <input type="email" class="form-control" name="email" placeholder="Ingrese su email" required pattern="[A-Za-z]+">
+                 <br/>
+                 <input type="text" class="form-control" name="phone" placeholder="Ingrese su celular" maxlength="8" required pattern="[0-9]+">
+                 <br/>
+                 <button class="btn btn-primary" type="submit">Registrar</button>
+             </form>
+        </div>
+</div>
+</body>
+</html>

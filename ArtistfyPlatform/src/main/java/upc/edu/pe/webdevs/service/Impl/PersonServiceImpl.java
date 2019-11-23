@@ -1,4 +1,4 @@
-package upc.edu.pe.webdevs.service;
+package upc.edu.pe.webdevs.service.Impl;
 
 import java.util.List;
 
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import upc.edu.pe.webdevs.model.Person;
 import upc.edu.pe.webdevs.repository.IPersonRepository;
+import upc.edu.pe.webdevs.service.IPersonService;
 
 @Service
 public class PersonServiceImpl implements IPersonService {

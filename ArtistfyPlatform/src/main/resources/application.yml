@@ -1,7 +1,7 @@
 spring:
   datasource:    url: jdbc:postgresql://localhost:5432/ArtistfyDB
     username: postgres
-    password: admin
+    password: root123
     driver-class-name: org.postgresql.Driver
   jpa:
     database: postgresql

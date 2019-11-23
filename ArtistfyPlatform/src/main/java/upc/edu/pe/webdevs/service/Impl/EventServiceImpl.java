@@ -1,4 +1,4 @@
-package upc.edu.pe.webdevs.service;
+package upc.edu.pe.webdevs.service.Impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import upc.edu.pe.webdevs.model.Event;
 import upc.edu.pe.webdevs.repository.IEventRepository;
+import upc.edu.pe.webdevs.service.IEventService;
 
 @Service
 public class EventServiceImpl implements IEventService {
